@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoFlare Ready Kit</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background: #fefefe; color: #333; }
+    header { background: url('https://th.bing.com/th/id/OIP.bhz3yc5QCxYmVwh4u1GFWAHaEV?w=305&h=180&c=7&r=0&o=5&pid=1.7') center/cover no-repeat; color: #fff; padding: 60px 20px; text-align: center; }
+    header h1 { font-size: 2.8rem; background-color: rgba(0, 0, 0, 0.5); display: inline-block; padding: 10px 20px; border-radius: 10px; }
+    nav { background: #d84315; text-align: center; padding: 10px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    nav a { color: #fff; margin: 0 20px; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
+    section { padding: 40px 20px; max-width: 1000px; margin: auto; line-height: 1.6; }
+    h2 { color: #bf360c; margin-bottom: 10px; font-size: 1.9rem; border-bottom: 2px solid #ff7043; padding-bottom: 5px; }
+    ul { margin-left: 20px; }
+    footer { background: #ffe0b2; text-align: center; padding: 15px; font-size: 0.95em; }
+    .button { background: #ff7043; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; font-weight: bold; }
+    .item-icon { cursor: pointer; margin-left: 10px; color: #ff6f3c; font-weight: bold; }
+    .tooltip { display: none; font-style: italic; color: #666; margin-top: 4px; margin-bottom: 10px; background: #f4f4f4; padding: 8px; border-radius: 4px; max-width: 500px; }
+    .resources ul { list-style-type: none; padding-left: 0; }
+    .resources li { margin: 10px 0; }
+    .responsive { width: 100%; height: auto; border-radius: 8px; margin-top: 15px; }
+    section#team ul { padding-left: 0; list-style-type: disc; }
+  </style>
+  <script>
+    function toggleTooltip(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>GoFlare Emergency Kit</h1>
+    <p style="background-color: rgba(0,0,0,0.5); display: inline-block; padding: 5px 15px; border-radius: 8px;">Be ready. Act fast. Stay safe in California wildfires.</p>
+  </header>
+
+  <nav>
+    <a href="#wildfires">About Wildfires</a>
+    <a href="#kit">The Kit</a>
+    <a href="#resources">Emergency Help</a>
+    <a href="#team">Our Team</a>
+    <a href="checkout.html" class="button">Order Now</a>
+  </nav>
+
+  <section id="wildfires">
+    <h2>Understanding Wildfires in Southern California</h2>
+    <p>Southern California faces some of the most aggressive wildfire seasons in the U.S. due to dry brush, strong winds, and extreme heat. These fires spread rapidly, threatening lives, homes, and infrastructure. Having the right emergency tools can make the difference between panic and preparedness.</p>
+    <img src="https://th.bing.com/th/id/OIP.3AIxNU847hMwUXr64Efq1AHaDb?w=345&h=162&c=7&r=0&o=5&pid=1.7" class="responsive" alt="California Fire Map">
+  </section>
+
+  <section id="kit">
+    <h2>What’s in the GoFlare Kit?</h2>
+    <ul>
+      <li>🩹 First Aid Kit <span class="item-icon" onclick="toggleTooltip('tip1')">[?]</span>
+        <div id="tip1" class="tooltip">Treats cuts, burns, and other injuries before help arrives.</div>
+      </li>
+      <li>😷 N95 Masks <span class="item-icon" onclick="toggleTooltip('tip2')">[?]</span>
+        <div id="tip2" class="tooltip">Protects your lungs from harmful wildfire smoke particles.</div>
+      </li>
+      <li>💧 Water Packs <span class="item-icon" onclick="toggleTooltip('tip3')">[?]</span>
+        <div id="tip3" class="tooltip">Essential for staying hydrated during evacuations.</div>
+      </li>
+      <li>🍫 Protein Bars <span class="item-icon" onclick="toggleTooltip('tip4')">[?]</span>
+        <div id="tip4" class="tooltip">Gives you quick, non-perishable energy while on the move.</div>
+      </li>
+      <li>🔋 Solar Power Bank <span class="item-icon" onclick="toggleTooltip('tip5')">[?]</span>
+        <div id="tip5" class="tooltip">Charges your phone without needing electricity.</div>
+      </li>
+      <li>🔦 Flashlight + Batteries <span class="item-icon" onclick="toggleTooltip('tip6')">[?]</span>
+        <div id="tip6" class="tooltip">Provides visibility in dark or smoky environments.</div>
+      </li>
+      <li>🔥 Fire Blanket <span class="item-icon" onclick="toggleTooltip('tip7')">[?]</span>
+        <div id="tip7" class="tooltip">Can smother small fires or wrap around you for protection.</div>
+      </li>
+      <li>🎒 Backpack <span class="item-icon" onclick="toggleTooltip('tip8')">[?]</span>
+        <div id="tip8" class="tooltip">Organizes and carries your emergency items quickly.</div>
+      </li>
+    </ul>
+    <p><a href="checkout.html" class="button">Customize & Order</a></p>
+  </section>
+
+  <section id="resources" class="resources">
+    <h2>Emergency Contacts & Wildfire Resources</h2>
+    <ul>
+      <li><strong>📞 Call 911:</strong> For immediate emergencies like fire, injury, or evacuation help.</li>
+      <li><strong>🔥 <a href="https://fire.ca.gov" target="_blank">CAL FIRE</a>:</strong> Get real-time updates, wildfire maps, and evacuation zones.</li>
+      <li><strong>🌐 <a href="https://www.readyforwildfire.org" target="_blank">Ready for Wildfire</a>:</strong> Build your plan, receive alerts, and learn safety tips.</li>
+      <li><strong>🏥 <a href="https://www.redcross.org" target="_blank">American Red Cross</a>:</strong> Offers shelter, aid, and family support during disasters.</li>
+    </ul>
+  </section>
+
+  <section id="team">
+    <h2>Our Team</h2>
+    <ul>
+      <li>Andy Crespo</li>
+      <li>Carlos Ramirez</li>
+      <li>Chelsea Alvarado</li>
+      <li>Christopher Estrada</li>
+      <li>George De La Cruz</li>
+      <li>Krystal Sanchez</li>
+    </ul>
+    <p><strong>ADMN 1001 – Professor Frank Almeida</strong></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 GoFlare Kit Project | Stay safe, stay ready.</p>
+  </footer>
+
+</body>
+</html>
