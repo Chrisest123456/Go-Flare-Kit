@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoFlare Kit Checkout</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background: #fefefe; color: #333; }
+    header { background: #bf360c; color: #fff; padding: 40px 20px; text-align: center; }
+    header h1 { font-size: 2.2rem; margin: 0; }
+    .container { max-width: 800px; margin: auto; padding: 20px; }
+    h2 { color: #bf360c; border-bottom: 2px solid #ff7043; padding-bottom: 5px; }
+    .item { display: flex; justify-content: space-between; margin-bottom: 10px; }
+    .item label { flex: 1; }
+    .item input[type="checkbox"] { margin-right: 10px; }
+    .total { font-size: 1.2rem; font-weight: bold; margin-top: 20px; }
+    .promo { margin-top: 20px; }
+    .promo input { padding: 5px; }
+    .note { font-style: italic; font-size: 0.9em; color: #777; margin-top: 5px; }
+    button { background: #ff7043; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; }
+    .back-link { display: inline-block; margin-top: 20px; text-decoration: none; color: #d84315; font-weight: bold; }
+  </style>
+  <script>
+    const prices = {
+      kit: 0,
+      firstAid: 14.99,
+      mask: 11.99,
+      water: 9.5,
+      bars: 8.49,
+      solar: 15,
+      flashlight: 6.99,
+      blanket: 14.99,
+      backpack: 12
+    };
+
+    function updateTotal() {
+      let total = 0;
+      for (let key in prices) {
+        const checkbox = document.getElementById(key);
+        if (checkbox && checkbox.checked) total += prices[key];
+      }
+      document.getElementById('total').textContent = 'Total: $' + total.toFixed(2);
+    }
+  </script>
+</head>
+<body onload="updateTotal()">
+
+  <header>
+    <h1>Customize Your GoFlare Kit</h1>
+  </header>
+
+  <div class="container">
+    <h2>Select Your Items</h2>
+    <div class="item"><label><input type="checkbox" id="firstAid" checked onchange="updateTotal()"> First Aid Kit - $14.99</label></div>
+    <div class="item"><label><input type="checkbox" id="mask" checked onchange="updateTotal()"> N95 Masks - $11.99</label></div>
+    <div class="item"><label><input type="checkbox" id="water" checked onchange="updateTotal()"> Water Packs - $9.50</label></div>
+    <div class="item"><label><input type="checkbox" id="bars" checked onchange="updateTotal()"> Protein Bars - $8.49</label></div>
+    <div class="item"><label><input type="checkbox" id="solar" checked onchange="updateTotal()"> Solar Power Bank - $15.00</label></div>
+    <div class="item"><label><input type="checkbox" id="flashlight" checked onchange="updateTotal()"> Flashlight + Batteries - $6.99</label></div>
+    <div class="item"><label><input type="checkbox" id="blanket" checked onchange="updateTotal()"> Fire Blanket - $14.99</label></div>
+    <div class="item"><label><input type="checkbox" id="backpack" checked onchange="updateTotal()"> Backpack - $12.00</label></div>
+
+    <div class="total" id="total">Total: $93.95</div>
+
+    <div class="promo">
+      <label>Promo Code: <input type="text" placeholder="Enter code here"></label>
+      <div class="note">Enter a promo code from an official partner organization to receive a free kit (limit one per person).</div>
+    </div>
+
+    <button>Checkout</button>
+    <br>
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </div>
+
+</body>
+</html>
